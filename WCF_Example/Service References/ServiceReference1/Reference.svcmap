@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="205ade3c-afda-423b-9acc-7fbffc6d68ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ef38796e-526f-4c15-b8b9-528fdf907c08" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1e4b7915-9792-463b-b73e-383ff1199942" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="90564ecc-f7c5-41e6-81a0-0c0d524436b7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" />
+    <MetadataFile FileName="WcfCalculationLib.xsd" MetadataType="Schema" ID="ea5388e1-5131-4c61-b255-6b6630e0a071" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="ad0a2b27-5a4a-41a6-9399-9f9b33d7783b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfCalculationLib/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
