@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfCalculationLib", "WcfCalculationLib\WcfCalculationLib.csproj", "{7D5FAE8E-07E8-4A17-BBF0-C70EC66D38DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics", "Graphics\Graphics.csproj", "{C8376D3F-9BCD-4A22-AE1F-2BD399EA2F79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1F7D38B3-84BA-4848-B8F1-9D91E7365F92} = {1F7D38B3-84BA-4848-B8F1-9D91E7365F92}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_Thermo", "Lib_Thermo\Lib_Thermo.csproj", "{8B92BA29-E190-44EE-AF99-FE437BA42E44}"
 EndProject

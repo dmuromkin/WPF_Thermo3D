@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfCalculationLib" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfCalculationLib" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://acer/WCF_Calc/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:complexType name="InputDate">
+<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfArrayOfArrayOfdouble">
     <xs:sequence>
-      <xs:element minOccurs="0" name="H" type="xs:double" />
-      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Mass_u" nillable="true" type="q1:ArrayOfArrayOfdouble" />
-      <xs:element minOccurs="0" name="Tau" type="xs:double" />
-      <xs:element minOccurs="0" name="Time" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfArrayOfdouble" nillable="true" type="tns:ArrayOfArrayOfdouble" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="InputDate" nillable="true" type="tns:InputDate" />
-  <xs:complexType name="OutputDate">
+  <xs:element name="ArrayOfArrayOfArrayOfdouble" nillable="true" type="tns:ArrayOfArrayOfArrayOfdouble" />
+  <xs:complexType name="ArrayOfArrayOfdouble">
     <xs:sequence>
-      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Culc_Teplo" nillable="true" type="q2:ArrayOfArrayOfdouble" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfdouble" nillable="true" type="tns:ArrayOfdouble" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OutputDate" nillable="true" type="tns:OutputDate" />
+  <xs:element name="ArrayOfArrayOfdouble" nillable="true" type="tns:ArrayOfArrayOfdouble" />
+  <xs:complexType name="ArrayOfdouble">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="double" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdouble" nillable="true" type="tns:ArrayOfdouble" />
 </xs:schema>

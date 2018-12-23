@@ -13,6 +13,7 @@
             <TextBox x:Name="right" Canvas.Right="-60" Width="50" Canvas.Top="140" Text="500"/>
             <TextBox x:Name="bottom" Canvas.Right="130" Width="50" Canvas.Bottom="-30" Text="500"/>
             <Button x:Name="Start" Content="Start" Click="Start_Click" Canvas.Right="-150" Canvas.Left="460" Width="90"/>
+            <CheckBox Canvas.Right="-250" Canvas.Top="50" Content="Параллельно" x:Name="CheckBoxParallel" />
         </Canvas>
         
     </Grid>

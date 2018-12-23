@@ -15,6 +15,144 @@ namespace Graphics.CalcService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InputDate3D", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculationLib")]
+    [System.SerializableAttribute()]
+    public partial class InputDate3D : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double HField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double[][][] Mass_uField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TauField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TimeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double H {
+            get {
+                return this.HField;
+            }
+            set {
+                if ((this.HField.Equals(value) != true)) {
+                    this.HField = value;
+                    this.RaisePropertyChanged("H");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double[][][] Mass_u {
+            get {
+                return this.Mass_uField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Mass_uField, value) != true)) {
+                    this.Mass_uField = value;
+                    this.RaisePropertyChanged("Mass_u");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Tau {
+            get {
+                return this.TauField;
+            }
+            set {
+                if ((this.TauField.Equals(value) != true)) {
+                    this.TauField = value;
+                    this.RaisePropertyChanged("Tau");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Time {
+            get {
+                return this.TimeField;
+            }
+            set {
+                if ((this.TimeField.Equals(value) != true)) {
+                    this.TimeField = value;
+                    this.RaisePropertyChanged("Time");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OutputDate3D", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculationLib")]
+    [System.SerializableAttribute()]
+    public partial class OutputDate3D : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double[][][] Culc_TeploField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double[][][] Culc_Teplo {
+            get {
+                return this.Culc_TeploField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Culc_TeploField, value) != true)) {
+                    this.Culc_TeploField = value;
+                    this.RaisePropertyChanged("Culc_Teplo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="InputDate", Namespace="http://schemas.datacontract.org/2004/07/WcfCalculationLib")]
     [System.SerializableAttribute()]
     public partial class InputDate : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -155,6 +293,18 @@ namespace Graphics.CalcService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalcService.ICalcService")]
     public interface ICalcService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/CulcTeploParal3D", ReplyAction="http://tempuri.org/ICalcService/CulcTeploParal3DResponse")]
+        Graphics.CalcService.OutputDate3D CulcTeploParal3D(Graphics.CalcService.InputDate3D inputMatrixes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/CulcTeploParal3D", ReplyAction="http://tempuri.org/ICalcService/CulcTeploParal3DResponse")]
+        System.Threading.Tasks.Task<Graphics.CalcService.OutputDate3D> CulcTeploParal3DAsync(Graphics.CalcService.InputDate3D inputMatrixes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/CulcTeploPosl3D", ReplyAction="http://tempuri.org/ICalcService/CulcTeploPosl3DResponse")]
+        Graphics.CalcService.OutputDate3D CulcTeploPosl3D(Graphics.CalcService.InputDate3D inputMatrixes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/CulcTeploPosl3D", ReplyAction="http://tempuri.org/ICalcService/CulcTeploPosl3DResponse")]
+        System.Threading.Tasks.Task<Graphics.CalcService.OutputDate3D> CulcTeploPosl3DAsync(Graphics.CalcService.InputDate3D inputMatrixes);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/CulcTeploParal", ReplyAction="http://tempuri.org/ICalcService/CulcTeploParalResponse")]
         Graphics.CalcService.OutputDate CulcTeploParal(Graphics.CalcService.InputDate inputMatrixes);
         
@@ -193,6 +343,22 @@ namespace Graphics.CalcService {
         
         public CalcServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public Graphics.CalcService.OutputDate3D CulcTeploParal3D(Graphics.CalcService.InputDate3D inputMatrixes) {
+            return base.Channel.CulcTeploParal3D(inputMatrixes);
+        }
+        
+        public System.Threading.Tasks.Task<Graphics.CalcService.OutputDate3D> CulcTeploParal3DAsync(Graphics.CalcService.InputDate3D inputMatrixes) {
+            return base.Channel.CulcTeploParal3DAsync(inputMatrixes);
+        }
+        
+        public Graphics.CalcService.OutputDate3D CulcTeploPosl3D(Graphics.CalcService.InputDate3D inputMatrixes) {
+            return base.Channel.CulcTeploPosl3D(inputMatrixes);
+        }
+        
+        public System.Threading.Tasks.Task<Graphics.CalcService.OutputDate3D> CulcTeploPosl3DAsync(Graphics.CalcService.InputDate3D inputMatrixes) {
+            return base.Channel.CulcTeploPosl3DAsync(inputMatrixes);
         }
         
         public Graphics.CalcService.OutputDate CulcTeploParal(Graphics.CalcService.InputDate inputMatrixes) {

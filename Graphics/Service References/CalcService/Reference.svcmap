@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="17197868-6402-41cb-912f-55daab07ccb6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cca80eea-85ae-41b1-9ed6-e0f0d285662d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/WCF_Calc/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:13776/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="dc2af446-339f-45b0-8828-951d30222bef" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?disco" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="5f285df6-22d4-4e53-8bd9-298849e0380b" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="e25b8445-4e67-4233-a454-bf3bb07be6b7" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="71f3b1a4-d3f5-4467-b098-956d71c7b30d" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="742d1a56-7c2d-48e8-a291-32b53c34c2b1" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="CalcService.wsdl" MetadataType="Wsdl" ID="b0ca162a-2ae8-4653-9d17-49919b7658d6" SourceId="1" SourceUrl="http://acer/WCF_Calc/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="68650be3-9dec-4e40-95a7-0ca6f08e2405" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="5584cbe0-146b-4b04-a3b2-df84e23045b7" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="CalcService.wsdl" MetadataType="Wsdl" ID="0b7a5576-bc25-4512-ad00-cdc40e501567" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="be5399be-f290-4a32-9825-0551a38f1c43" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?disco" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="5660d2de-8762-4d1d-8241-64e4b5805f66" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="e82a755f-bc04-424f-af25-9d2e77126766" SourceId="1" SourceUrl="http://localhost:13776/Service1.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

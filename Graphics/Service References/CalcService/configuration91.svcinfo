@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="dcsNHPKbeqd2XFr2gfXCpNyZPLM=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5QdPrZJ5ZyPCl+SWqH3nxIjqXck=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICalcService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ICalcService" contract="CalcService.ICalcService" bindingType="basicHttpBinding" address="http://acer/WCF_Calc/Service1.svc" bindingConfiguration="BasicHttpBinding_ICalcService">
+    <endpoint name="BasicHttpBinding_ICalcService" contract="CalcService.ICalcService" bindingType="basicHttpBinding" address="http://localhost:13776/Service1.svc" bindingConfiguration="BasicHttpBinding_ICalcService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://acer/WCF_Calc/Service1.svc</serializedValue>
+          <serializedValue>http://localhost:13776/Service1.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

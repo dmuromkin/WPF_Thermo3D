@@ -97,11 +97,11 @@ namespace Graphics {
 
             return mArray;
         }
-        const int n = 60;
+        const int n = 75;
         public Rectangle[,] rects = new Rectangle[n, n];
 
 
-        public void calculate() {
+        async void calculate() {
             double time = 0.2;
             double tau = 0.1;
             double h = 1;
@@ -123,18 +123,39 @@ namespace Graphics {
             CalcServiceClient calcservice = new CalcServiceClient();
             InputDate inputdate = new InputDate();
             OutputDate outputDate = new OutputDate();
-            inputdate.H = h;
-            inputdate.Tau = tau;
-            inputdate.Time = time;
 
-            inputdate.Mass_u = ToJagged(u);
 
-            outputDate = calcservice.CulcTeploPosl(inputdate);
+            if (CheckBoxParallel.IsChecked == false) {
+                await Task.Run(() => {
+                    inputdate.H = h;
+                    inputdate.Tau = tau;
+                    inputdate.Time = time;
 
-            u = ToMultiD(outputDate.Culc_Teplo);
+                    inputdate.Mass_u = ToJagged(u);
 
-            //отрисовка
-            plotting(u);
+                    outputDate = calcservice.CulcTeploPosl(inputdate);
+
+                    u = ToMultiD(outputDate.Culc_Teplo);
+
+                });
+                //отрисовка
+                plotting(u);
+            }
+            else {
+                await Task.Run(() => {
+                    inputdate.H = h;
+                    inputdate.Tau = tau;
+                    inputdate.Time = time;
+
+                    inputdate.Mass_u = ToJagged(u);
+
+                    outputDate = calcservice.CulcTeploParal(inputdate);
+
+                    u = ToMultiD(outputDate.Culc_Teplo);
+                });
+                //отрисовка
+                plotting(u);
+            }
         }
 
         public void plotting(double[,] u) {
