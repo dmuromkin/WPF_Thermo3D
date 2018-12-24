@@ -156,7 +156,7 @@ namespace Graphics3D {
             }
 
                 timer.Tick += Timer_Tick;
-                timer.Interval = new TimeSpan(0, 0, 100);
+                timer.Interval = new TimeSpan(0, 0, 5);
                 timer.Start();
             
 

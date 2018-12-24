@@ -54,7 +54,6 @@
     <Compile Include="LogBase\LogEntry.cs" />
     <Compile Include="LogBase\LoggerExtensions.cs" />
     <Compile Include="NLogAdapter\NLogAdapter.cs" />
-    <Compile Include="OutLog.cs" />
     <Compile Include="Thermo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

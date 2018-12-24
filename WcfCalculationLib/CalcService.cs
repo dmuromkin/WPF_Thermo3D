@@ -133,12 +133,13 @@ namespace WcfCalculationLib
 
         public OutputDate3D CulcTeploParal3D(InputDate3D inputDate) {
             OutputDate3D mass_data = new OutputDate3D();
-            ILogger log = new NLogAdapter();
+                      
             double[,,] array1 = ToMulti3D(inputDate.Mass_u);
 
             double h = inputDate.H;
             double time = inputDate.Time;
             double tau = inputDate.Tau;
+            ILogger log = new NLogAdapter();
             Thermo teplo = new Thermo(log);
             double[,,] array2 = teplo.ЗDParalCulc(array1, time, tau, h);
             mass_data.Culc_Teplo = ToJagged3D(array2);
