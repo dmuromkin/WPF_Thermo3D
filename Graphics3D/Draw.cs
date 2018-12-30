@@ -7,7 +7,7 @@ using HelixToolkit.Wpf;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace Graphics3D {//graphics
+namespace Graphics3D {//graphic
     class Draw {
         int n;
         BoxVisual3D[,,] box;
