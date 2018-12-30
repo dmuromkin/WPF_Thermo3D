@@ -1,0 +1,41 @@
+﻿<Window x:Class="Graphics3D.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Graphics3D"
+        xmlns:h ="http://helix-toolkit.org/wpf"
+        mc:Ignorable="d"
+        
+        Height="735.766" Width="1104" ResizeMode="NoResize">
+    <Grid>
+        <Canvas Margin="10,10,0,10">
+            <TextBlock Canvas.Left="442" Canvas.Top="50"><Run Text="В"/><Run Text="ерхн"/><Run Text="яя"/><Run Text=" гран"/><Run Text="ь"/></TextBlock>
+            <TextBox Canvas.Left="526" Canvas.Top="48" x:Name="TopGran" Width="100" Text="500"/>
+
+            <TextBlock Canvas.Top="280" Canvas.Left="184"><Run Text="Л"/><Run Text="ев"/><Run Text="ая"/><Run Text=" гран"/><Run Text="ь"/></TextBlock>
+            <TextBox Canvas.Left="184" Canvas.Top="301" x:Name="LeftGran" Width="100" Text="0"/>
+
+            <TextBlock Canvas.Left="444" Canvas.Bottom="30" Canvas.Top="620"><Run Text="Н"/><Run Text="ижн"/><Run Text="яя"/><Run Text=" гран"/><Run Text="ь"/></TextBlock>
+            <TextBox Canvas.Left="526" Canvas.Bottom="10" x:Name="BottomGran" Width="100" Text="100" Canvas.Top="618"/>
+
+            <TextBlock Canvas.Top="280" Canvas.Left="872"><Run Text="П"/><Run Text="рав"/><Run Text="ая"/><Run Text=" гран"/><Run Text="ь"/></TextBlock>
+            <TextBox Canvas.Left="872" Canvas.Top="301" x:Name="RightGran" Width="100" Text="0" RenderTransformOrigin="0.495,0.547"/>
+
+
+            <TextBlock><Run Text="Т"/><Run Text="емператур"/><Run Text="а"/><Run Text=" пластины"/></TextBlock>
+            <TextBox x:Name="TempPlan" Width="100" Text="10" Canvas.Top="20"/>
+            <TextBlock Canvas.Top="43"><Run Text="Т"/><Run Text="емператур"/><Run Text="а"/><Run Text=" передней части"/></TextBlock>
+            <TextBox x:Name="FrontTemp" Width="100" Text="10" Canvas.Top="64"/>
+            <TextBlock Canvas.Top="87"><Run Text="Т"/><Run Text="емператур"/><Run Text="а"/><Run Text=" задней части"/></TextBlock>
+            <TextBox x:Name="TeilTemp" Width="100" Text="10" Canvas.Top="108"/>
+            <h:HelixViewport3D x:Name="Helix" Width="549" Height="522" Canvas.Left="300" Canvas.Top="80">
+                <h:DefaultLights x:Name="light"/>
+            </h:HelixViewport3D>
+            <Button Canvas.Right="50" Canvas.Top="80" Width="130" Height="50" Content="Старт" x:Name="Start_button" Click="Start_button_Click"/>
+            <CheckBox Canvas.Right="50" Canvas.Top="156" Content="Параллельный расчет" x:Name="CheckBoxParallel" Canvas.Left="918" />
+
+        </Canvas>
+
+    </Grid>
+</Window>
