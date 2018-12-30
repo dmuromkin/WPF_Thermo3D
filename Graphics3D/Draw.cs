@@ -16,7 +16,7 @@ namespace Graphics3D {
             box = new BoxVisual3D[n, n, n];
         }
 
-        SolidColorBrush brush = new SolidColorBrush();//brush
+        SolidColorBrush brush = new SolidColorBrush();//brushes
        // SolidColorBrush greenBrush = new SolidColorBrush();
         double clr;
         Color color;
