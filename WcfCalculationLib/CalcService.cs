@@ -8,7 +8,7 @@ using Lib_Thermo;
 
 namespace WcfCalculationLib
 {
-    public class CalcService : ICalcService
+    public class CalcService : ICalcService//service
     {
             public static T[][] ToJagged<T>(T[,] mArray) {
                 var rows = mArray.GetLength(0);
