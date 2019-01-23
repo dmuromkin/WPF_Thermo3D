@@ -99,6 +99,7 @@ namespace WcfCalculationLib
             }
 
         public OutputDate3D CulcTeploPosl3D(InputDate3D inputDate) {
+            
             OutputDate3D mass_data = new OutputDate3D();
             
             double[,,] array1 = ToMulti3D(inputDate.Mass_u);

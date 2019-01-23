@@ -28,11 +28,12 @@
             <TextBlock Canvas.Top="43"><Run Text="Т"/><Run Text="емператур"/><Run Text="а"/><Run Text=" передней части"/></TextBlock>
             <TextBox x:Name="FrontTemp" Width="100" Text="10" Canvas.Top="64"/>
             <TextBlock Canvas.Top="87"><Run Text="Т"/><Run Text="емператур"/><Run Text="а"/><Run Text=" задней части"/></TextBlock>
-            <TextBox x:Name="TeilTemp" Width="100" Text="10" Canvas.Top="108"/>
+            <TextBox x:Name="BackTemp" Width="100" Text="10" Canvas.Top="108"/>
             <h:HelixViewport3D x:Name="Helix" Width="549" Height="522" Canvas.Left="300" Canvas.Top="80">
                 <h:DefaultLights x:Name="light"/>
             </h:HelixViewport3D>
-            <Button Canvas.Right="50" Canvas.Top="80" Width="130" Height="50" Content="Старт" x:Name="Start_button" Click="Start_button_Click"/>
+            
+            <Button Canvas.Right="50" Canvas.Top="80" Width="130" Height="50" Content="Старт" x:Name="StartStop_button" Click="StartStop_button_Click"/>
             <CheckBox Canvas.Right="50" Canvas.Top="156" Content="Параллельный расчет" x:Name="CheckBoxParallel" Canvas.Left="918" />
 
         </Canvas>

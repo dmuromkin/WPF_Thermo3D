@@ -11,7 +11,7 @@ namespace Lib_Thermo
     public class Thermo
     {
 
-        private ILogger _Logger;
+        public ILogger _Logger;
         Stopwatch timer = new Stopwatch();
         public Thermo(ILogger logger) {
             SetLogger(logger);

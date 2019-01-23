@@ -38,6 +38,7 @@ namespace Graphics3D {
         int n = 10;
 
         double time;
+       public bool start = true;
         double tau;
         double h;
         double[,,] u;
@@ -74,7 +75,8 @@ namespace Graphics3D {
 
 
 
-        public static T[,,] ToMulti3D<T>(T[][][] jArray) {
+        public static T[,,] ToMulti3D<T>(T[][][] jArray)
+        {
             int i = jArray.Count();
             int j = jArray.Select(x => x.Count()).Aggregate(0, (current, c) => (current > c) ? current : c);
             int k = jArray[0][0].Length;
@@ -126,7 +128,7 @@ namespace Graphics3D {
             //Считывание начальных границ
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
-                    u[j, 0, k] = Convert.ToDouble(TeilTemp.Text);
+                    u[j, 0, k] = Convert.ToDouble(BackTemp.Text);
                 }
             }
             for (int j = 0; j < n; j++) {
@@ -202,10 +204,36 @@ namespace Graphics3D {
 
         }
 
-        private void Start_button_Click(object sender, RoutedEventArgs e) {
-            StartCalc();
-            Calc();
-            Start_button.IsEnabled = false;
+        private void StartStop_button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Start_Stop_Calculations(start);
+           // StartStop_button.IsEnabled = block;
         }  
+        public void Start_Stop_Calculations(bool index)
+        {
+            switch (index)
+            {
+                case true:
+                    {
+                        StartCalc();
+                        Calc();
+                        StartStop_button.Content = "Stop";
+
+                        start = false;
+                        break;
+                    }
+                case false:
+                    {
+                        Helix.Children.Clear();
+                        Helix.Children.Add(light);
+                        Helix.InvalidateArrange();
+                        Helix.InvalidateVisual();
+                        StartStop_button.Content = "Start";
+                        start = true;
+                        break;
+                    }
+            }
+        }
     }
 }
