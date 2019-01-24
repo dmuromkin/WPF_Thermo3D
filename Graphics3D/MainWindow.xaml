@@ -33,7 +33,7 @@
                 <h:DefaultLights x:Name="light"/>
             </h:HelixViewport3D>
             
-            <Button Canvas.Right="50" Canvas.Top="80" Width="130" Height="50" Content="Старт" x:Name="StartStop_button" Click="StartStop_button_Click"/>
+            <Button Canvas.Right="50" Canvas.Top="80" Width="130" Height="50" Content="Start" FontSize="30" x:Name="StartStop_button" Click="StartStop_button_Click"/>
             <CheckBox Canvas.Right="50" Canvas.Top="156" Content="Параллельный расчет" x:Name="CheckBoxParallel" Canvas.Left="918" />
 
         </Canvas>

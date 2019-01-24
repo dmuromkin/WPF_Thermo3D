@@ -203,12 +203,44 @@ namespace Graphics3D {
             }
 
         }
-
+        private void form_interface(bool enabled)
+        {
+            switch(enabled)
+            {
+                case true:
+                    {
+                        StartStop_button.Content = "Stop";
+                        CheckBoxParallel.IsEnabled = false;
+                        LeftGran.IsEnabled = false;
+                        RightGran.IsEnabled = false;
+                        TopGran.IsEnabled = false;
+                        BottomGran.IsEnabled = false;
+                        TempPlan.IsEnabled = false;
+                        BackTemp.IsEnabled = false;
+                        FrontTemp.IsEnabled = false;
+                    }
+                    break;
+                case false:
+                    {
+                        StartStop_button.Content = "Start";
+                        CheckBoxParallel.IsEnabled = true;
+                        LeftGran.IsEnabled = true;
+                        RightGran.IsEnabled = true;
+                        TopGran.IsEnabled = true;
+                        BottomGran.IsEnabled = true;
+                        TempPlan.IsEnabled = true;
+                        BackTemp.IsEnabled = true;
+                        FrontTemp.IsEnabled = true;
+                    }
+                    break;
+            }
+          
+        }
         private void StartStop_button_Click(object sender, RoutedEventArgs e)
         {
 
             Start_Stop_Calculations(start);
-           // StartStop_button.IsEnabled = block;
+           
         }  
         public void Start_Stop_Calculations(bool index)
         {
@@ -218,8 +250,7 @@ namespace Graphics3D {
                     {
                         StartCalc();
                         Calc();
-                        StartStop_button.Content = "Stop";
-
+                        form_interface(index);
                         start = false;
                         break;
                     }
@@ -229,7 +260,7 @@ namespace Graphics3D {
                         Helix.Children.Add(light);
                         Helix.InvalidateArrange();
                         Helix.InvalidateVisual();
-                        StartStop_button.Content = "Start";
+                        form_interface(index);
                         start = true;
                         break;
                     }
